@@ -1,0 +1,19 @@
+package com.student.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.entity.Students;
+import com.student.repo.MruRepo;
+
+@Service
+public class MruService {
+	@Autowired
+	private MruRepo repo;
+	public List<Students> getAllStudents(){
+		return repo.findAll();
+	}
+
+}
